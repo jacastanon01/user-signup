@@ -39,14 +39,15 @@ def signup():
         password = ""
     if not (verify_password) == password:
         verify_error = "Passwords do not match"
+    if not email == "":
 
-    if len(email) <= 3 or len(email) > 20 or " " in email:
-        email_error = "Please enter a valid email"    
-    elif "@" and "."not in email:
-        email_error = "Please enter a valid email"
-        email =""
-    elif "@" and "." in email:
-        email = ""
+        if len(email) <= 3 or len(email) > 20 or " " in email:
+            email_error = "Please enter a valid email"    
+        elif "@" and "."not in email:
+            email_error = "Please enter a valid email"
+            email =""
+        elif "@" and "." in email:
+            email = ""
         
 
     if not username_error and not password_error and not verify_error and not email_error:
